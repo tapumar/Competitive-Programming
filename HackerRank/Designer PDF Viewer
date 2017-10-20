@@ -1,0 +1,16 @@
+#!/bin/python3
+
+import sys
+
+
+h = list(map(int, input().strip().split(' ')))
+word = input().strip()
+lista = []
+for i in word:
+    n = ord(i) - 97
+    m = h[n]
+    lista.append(m)
+
+total = len(word)*max(lista)
+print(total)
+
