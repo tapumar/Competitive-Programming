@@ -1,0 +1,31 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main(){
+    int n; 
+    scanf("%d",&n);
+    int a[n][n];
+    int soma1=0,soma2=0,total;
+    for(int a_i = 0; a_i < n; a_i++){
+       for(int a_j = 0; a_j < n; a_j++){
+          
+          scanf("%d",& a[a_i][a_j]);
+           if(a_i==a_j){
+               soma1 += a[a_i][a_j];
+           }
+           if((a_i+a_j+1) == n){
+               soma2 +=a[a_i][a_j];
+           }
+       }
+    }
+    
+    total = soma1-soma2;
+    total = abs(total);
+    printf("%d\n", total);
+    return 0;
+}
