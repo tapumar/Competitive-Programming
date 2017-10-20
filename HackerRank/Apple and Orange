@@ -1,0 +1,46 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main(){
+    int cont_apple=0, cont_orange=0,i;
+    int s; 
+    int t; 
+    scanf("%d %d",&s,&t);
+    int a; 
+    int b; 
+    scanf("%d %d",&a,&b);
+    int m; 
+    int n; 
+    scanf("%d %d",&m,&n);
+    int apple_i,orange_i;
+    //int tam_apple = malloc(sizeof(int) * m);
+    int apple[100000];
+    for(int apple_i = 0; apple_i < m; apple_i++){
+       scanf("%d",&apple[apple_i]);
+    }
+    //int tam_orange = malloc(sizeof(int) * n);
+    int orange[100000];
+    for(int orange_i = 0; orange_i < n; orange_i++){
+       scanf("%d",&orange[orange_i]);
+    }
+    for(i=0;i<m;i++){
+        if(apple[i]+a >= s && apple[i]+a <= t){
+            cont_apple++;
+        }
+    }
+    printf("%d\n",cont_apple);
+   for(i=0;i<n;i++){
+       if(orange[i]+b <= t && orange[i]+b >=s){
+           cont_orange++;
+       }
+   }
+    
+    printf("%d\n", cont_orange);
+    
+    return 0;
+}
