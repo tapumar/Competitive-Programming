@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+factorial(int n){
+    int fatorial =1;
+    
+    if(n==1){
+        return fatorial;
+    }
+    else
+        fatorial = fatorial*n;
+        return fatorial*factorial(n-1);
+    
+}
+int main() {
+
+    int num, fac;
+    
+    scanf("%d", &num);
+    fac = factorial(num);
+    printf("%d\n", fac);
+    
+    return 0;
+}
