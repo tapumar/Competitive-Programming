@@ -1,0 +1,72 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main(){
+    char time[10];
+    scanf("%s",time);
+    
+    if(time[8] == 80){
+        if(time[0] == 48){
+           switch(time[1]){
+            case 49:
+                time[1] = 51;
+               time[0] = 49;
+               break;
+            case 50:
+               time[1] = 52;
+               time[0] = 49;
+               break;
+            case 51:
+               time[1] = 53;
+               time[0] = 49;
+               break;
+            case 52:
+               time[1] = 54;
+               time[0] = 49;
+               break;
+            case 53:
+               time[1] = 55;
+               time[0] = 49;
+               break;
+            case 54:
+               time[1] = 56;
+               time[0] = 49;
+               break;
+            case 55:
+               time[1] = 57;
+               time[0] = 49;
+               break;
+            case 56:
+               time[1] = 48;
+               time[0] = 50;
+               break;
+            case 57:
+               time[1] = 49;
+               time[0] = 50;
+               break;
+            } 
+        }
+        else {
+            switch(time[1]){
+            case 49:
+                time[1] = 51;
+               time[0] = 50;
+               break;
+            }
+        }     
+    }
+    else{
+        if(time[0] == 49 && time[1] == 50){
+            time[1] = 48;
+            time[0] = 48;
+        }
+    }
+    time[8] = '\0';
+    printf("%s\n", time);
+    return 0;
+}
