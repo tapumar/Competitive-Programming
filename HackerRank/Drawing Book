@@ -1,0 +1,16 @@
+#!/bin/python3
+
+import sys
+
+
+n = int(input().strip())
+p = int(input().strip())
+if n%2 != 0:
+    n = n-1
+if p%2 != 0:
+    p = p-1
+if p <= int(n/2):
+    print(int(p/2))
+else:
+    print(int((n-p)/2))
+    
