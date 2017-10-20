@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int n,floor,met,i,cont;
+    
+    scanf("%d", &n);
+    floor =5;
+    met = floor/2;
+    cont = 2;
+    for(i=2;i<=n;i++){
+       floor = met*3;
+       met = floor/2; 
+        cont = cont+met;
+    } 
+    printf("%d\n", cont);
+return 0;
+}
