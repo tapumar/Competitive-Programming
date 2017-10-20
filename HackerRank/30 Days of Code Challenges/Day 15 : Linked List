@@ -1,0 +1,10 @@
+def insert(self,head,data): 
+        if (head == None):
+            head = Node(data)
+        else:
+            current = head
+            while (current.next != None):
+                current = current.next
+            current.next = Node(data)
+        return head
+  
