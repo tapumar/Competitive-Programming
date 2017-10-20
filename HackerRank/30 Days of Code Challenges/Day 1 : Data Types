@@ -1,0 +1,13 @@
+   
+    int j;
+    double f;
+    char st[200];
+
+    scanf("%d", &j);
+    scanf("%lf", &f);
+getchar();
+    scanf("%[^EOF]", st);
+      getchar();  
+    printf("%d\n", (i+j));
+    printf("%.1lf\n", (d+f));
+    printf("%s%s",s,st);
