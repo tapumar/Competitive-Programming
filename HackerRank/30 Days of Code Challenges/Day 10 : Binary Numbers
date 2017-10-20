@@ -1,0 +1,14 @@
+#!/bin/python3
+
+n = int(input().strip())
+binario = str(bin(n))
+soma = 0
+maior = 0
+for i in range(2,len(binario)):
+  if binario[i] == "1":
+    soma += 1
+  else:
+    soma = 0
+  if soma > maior:
+    maior = soma
+print(maior)
