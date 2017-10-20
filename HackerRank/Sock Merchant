@@ -1,0 +1,28 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main(){
+    int n,cont=0,j,x; 
+    scanf("%d",&n);
+    int c[100];
+    
+    for(int c_i = 0; c_i < n; c_i++){
+       scanf("%d",&c[c_i]);
+    }
+    for(x=0;x<n;x++){
+        for(j=0;j<n;j++){
+            if(c[j] == c[x] && j!=x && c[x] != 0 && c[j] != 0){
+                cont++;
+                c[j] = 0;
+                c[x] = 0;
+            }
+        }
+    }
+    printf("%d\n", cont);
+    return 0;
+}
