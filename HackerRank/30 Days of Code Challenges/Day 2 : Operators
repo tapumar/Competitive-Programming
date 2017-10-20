@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    
+    float conta, gorjeta,taxa,total;
+    scanf("%f", &conta);
+    scanf("%f", &gorjeta);
+    scanf("%f", &taxa);
+    total = conta + (conta*(gorjeta/100)) + (conta*(taxa/100));
+    printf("The total meal cost is %.0f dollars.\n", total );
+    
+    return 0;
+}
