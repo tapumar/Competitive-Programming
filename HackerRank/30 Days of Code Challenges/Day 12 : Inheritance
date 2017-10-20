@@ -1,0 +1,59 @@
+
+class Student extends person {
+    private $testScores;
+    private $soma;
+    private $tam;
+    /*	
+    *   Class Constructor
+    *   
+    *   Parameters:
+    *   firstName - A string denoting the Person's first name.
+    *   lastName - A string denoting the Person's last name.
+    *   id - An integer denoting the Person's ID number.
+    *   scores - An array of integers denoting the Person's test scores.
+    */
+    public function __construct($firstName,$lastName,$id,$scores){
+        $this->firstName = $firstName;
+        $this->lastName = $lastName;
+        $this->id = $id;
+        $this->tam=0;
+        foreach($scores as $value){
+            $this->soma = $this->soma+$value;
+            $this->tam=$this->tam+1;
+        }
+        $this->testScores = $scores;
+    }
+
+    /*	
+    *   Function Name: calculate
+    *   Return: A character denoting the grade.
+    */
+    public function calculate(){
+        //$tam=1;
+        //$soma=0;
+        //foreach((array)$testScores as $value){
+          //  $soma = $soma+$value;
+            //$tam=$tam+1;
+        //}
+        $this->soma = $this->soma/$this->tam;
+       if($this->soma>=90 && $this->soma <=100){
+           return "O";
+       } 
+       else if($this->soma>=80 && $this->soma < 90){
+           return "E";
+       }
+        else if($this->soma >=70 && $this->soma<80){
+            return "A";
+        }
+        else if($this->soma>=55 && $this->soma <70){
+            return "P";
+        }
+        else if($this->soma >=40 && $this->soma <55){
+            return "D";
+        }
+        else{
+            return "T";
+        }
+    }
+    
+}
