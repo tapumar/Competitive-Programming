@@ -1,0 +1,19 @@
+#!/bin/python3
+
+import sys
+
+
+n = int(input().strip())
+score = list(map(int, input().strip().split(' ')))
+Maior=-1
+Menor=100000001
+max=-1
+min=-1
+for i in score:
+    if i>Maior:
+        max=max+1
+        Maior=i
+    if i<Menor:
+        min=min+1
+        Menor=i
+print(str(max)+" "+ str(min))
