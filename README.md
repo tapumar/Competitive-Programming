@@ -1,3 +1,3 @@
 # Competitive-Programming
 
-### Each site is separated on folders.
+### Each plataform is in the specified folder.
