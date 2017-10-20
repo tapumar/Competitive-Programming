@@ -1,3 +1,3 @@
 # Competitive-Programming
 
-## Each site is separated on folders.
+### Each site is separated on folders.
