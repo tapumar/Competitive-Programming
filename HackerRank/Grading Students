@@ -1,0 +1,14 @@
+#!/bin/python3
+
+import sys
+
+
+n = int(input().strip())
+for a0 in range(n):
+    grade = int(input().strip())
+    if (grade%10 == 8 or grade%10 == 3) and grade >= 38:
+        print(grade+2)
+    elif (grade%10 == 9 or grade%10 == 4) and grade >= 38:
+        print(grade+1)
+    else:
+        print(grade)
