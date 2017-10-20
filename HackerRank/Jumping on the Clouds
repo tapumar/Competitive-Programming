@@ -1,0 +1,20 @@
+#!/bin/python3
+
+import sys
+
+
+n = int(input().strip())
+c = [int(c_temp) for c_temp in input().strip().split(' ')]
+cont = 0
+i=0
+while i < len(c):
+    if i == len(c)-2:
+        cont += 1
+    elif i < len(c)-2:
+        if c[i+2] == 0:
+            i = i + 1
+            cont += 1
+        else:
+            cont += 1
+    i = i+ 1
+print(cont)
