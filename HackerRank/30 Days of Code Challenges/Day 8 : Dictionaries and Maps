@@ -1,0 +1,20 @@
+n = int(raw_input())
+dic = {}
+for p in range(0, n):
+    info = raw_input().split(" ")
+    name = info[0]
+    numb = info[1]
+    dic[name] = numb
+    
+while True:
+    try:
+        search = raw_input()
+        found = dic.get(search)
+        if found:
+            equal = '='
+            sentence = search+equal+found
+            print sentence
+        else:
+            print "Not found"
+    except EOFError:
+        break
