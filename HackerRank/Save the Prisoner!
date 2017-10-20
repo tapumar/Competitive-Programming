@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    long long int n,candy,start,prison,i,poison;
+    
+    scanf("%lld", &n);
+    for(i=0;i<n;i++){
+        scanf("%lld %lld %lld", &prison,&candy,&start);
+        while(candy>prison){
+            candy = candy - prison;
+        }
+       if((prison-(start-1))>=candy){
+           poison = (start-1)+candy;
+       }
+        else{
+            poison = candy-(prison-(start-1)); 
+        }
+       
+        printf("%lld\n", poison);
+    }
+    
+    return 0;
+}
