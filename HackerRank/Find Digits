@@ -1,0 +1,16 @@
+#!/bin/python3
+
+import sys
+
+t = int(input().strip())
+for a0 in range(t):
+    cont =0
+    n = int(input().strip())
+    aux = str(n)
+    for i in aux:
+        i = int(i)
+        if(i == 0):
+            continue
+        elif n%i == 0:
+            cont = cont+1
+    print(cont)
