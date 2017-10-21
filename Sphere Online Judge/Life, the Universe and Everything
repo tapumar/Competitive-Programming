@@ -1,0 +1,5 @@
+while(True):
+    life = input().strip()
+    if life == "42":
+        break
+    print(life)
